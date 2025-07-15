@@ -9,7 +9,7 @@
 
 [![Blog](https://img.shields.io/badge/blog-black?style=for-the-badge&logo=googledocs&logoColor=white)](https://hkunlp.github.io/blog/2025/dream-coder/)
 [![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)](https://zhxie.notion.site/Dream-Coder-7B-1d608d27359e805d9e56dc0fbee945b1)
-[![Twitter](https://img.shields.io/badge/twitter-white?style=for-the-badge&logo=X&logoColor=white&color=black)]()
+[![Twitter](https://img.shields.io/badge/twitter-white?style=for-the-badge&logo=X&logoColor=white&color=black)](https://x.com/_zhihuixie/status/1945140882795274598)
 [![Hugging Face Model](https://img.shields.io/badge/models-%23000000?style=for-the-badge&logo=huggingface&logoColor=000&logoColor=white)](https://huggingface.co/collections/Dream-org/dream-coder-7b-68761cfa0e218f0776a84ee7)
 
 </div>
