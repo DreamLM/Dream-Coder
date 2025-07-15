@@ -93,7 +93,7 @@ print(generations[0].split(tokenizer.eos_token)[0])
 ```
 
 ## Releases
-- [x] [Our blog]() and [model weights]()
+- [x] [Our blog](https://hkunlp.github.io/blog/2025/dream-coder/) and [model weights](https://huggingface.co/collections/Dream-org/dream-coder-7b-68761cfa0e218f0776a84ee7)
 - [ ] Data processing scripts
 - [ ] Training recipes based on [verl](https://github.com/volcengine/verl)
 
