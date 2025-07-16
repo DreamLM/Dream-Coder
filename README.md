@@ -48,7 +48,7 @@ We observe Dream-Coder 7B exhibits emergent any-order generation that adaptively
 These demos were collected using consistent sampling parameters: `temperature=0.1, diffusion_steps=512, max_new_tokens=512, alg="entropy", top_p=1.0, alg_temp=0.0, eos_penalty=3.0`.
 
 ### Variable-Length Code Infilling
-We also introduce an infilling variant, **DreamOn-7B**, that naturally adjusts the length of masked spans during generation for variable-length code infilling. For more details, please refer to our accompanying [blog post]().
+We also introduce an infilling variant, **DreamOn-7B**, that naturally adjusts the length of masked spans during generation for variable-length code infilling. For more details, please refer to our accompanying [blog post](https://www.notion.so/DreamOn-Diffusion-Language-Models-For-Code-Infilling-Beyond-Fixed-Size-Canvas-228be544bdbb80cc991ef540e7805bd7).
 
 ## Quickstart
 To get start with,
