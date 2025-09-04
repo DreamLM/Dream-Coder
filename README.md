@@ -22,6 +22,9 @@ Dream-Coder 7B is a **diffusion LLM for code** trained exclusively on open-sourc
     <img src="assets/results.png" width="90%"/>
 <p>
 
+## Note on the Code Release 🥲
+We're still working through our internal code review. Thank you for your patience—please stay tuned!
+
 ## Features
 ### Flexible Code Generation
 We observe Dream-Coder 7B exhibits emergent any-order generation that adaptively determines its decoding style based on the coding task. For example, Dream-Coder 7B Instruct displays patterns such as:
