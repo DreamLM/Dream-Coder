@@ -1,0 +1,29 @@
+task: mbpp_instruct
+dataset_path: evalplus/mbppplus
+dataset_name: full
+unsafe_code: true
+output_type: generate_until
+test_split: test
+doc_to_text: "{{text}}\nThe code should pass these tests:\n\n{{test_list[0]}}\n{{test_list[1]}}\n{{test_list[2]}}\n\n"
+doc_to_target: "{% if is_fewshot is defined %}{{code}}\n```\n{% else %}{{test_list[0]}}\n{{test_list[1]}}\n{{test_list[2]}}\n\n{% endif %}"
+gen_prefix: "Here is the completed function:\n```python\n"
+target_delimiter: ""
+metric_list:
+  - metric: !function utils.pass_at_1
+    aggregation: mean
+    higher_is_better: true
+generation_kwargs:
+  until:
+    - "```"
+  do_sample: false
+num_fewshot: 0
+fewshot_config:
+  sampler: first_n
+  samples: !function utils.list_fewshot_samples
+metadata:
+  version: 1.0
+# filter_list:
+#   - name: "create_test"
+#     filter:
+#       - function: "custom"
+#         filter_fn: !function utils.build_predictions_base
