@@ -113,10 +113,10 @@ We gratefully acknowledge the following open-source projects, which have been in
 
 ## Citation
 ```
-@misc{dreamcoder2025,
-    title = {Dream-Coder 7B},
-    url = {https://hkunlp.github.io/blog/2025/dream-coder},
-    author = {Xie, Zhihui and Ye, Jiacheng and Zheng, Lin and Gao, Jiahui and Dong, Jingwei and Wu, Zirui and Zhao, Xueliang and Gong, Shansan and Jiang, Xin and Li, Zhenguo and Kong, Lingpeng},
-    year = {2025}
+@article{xie2025dream,
+  title={Dream-coder 7b: An open diffusion language model for code},
+  author={Xie, Zhihui and Ye, Jiacheng and Zheng, Lin and Gao, Jiahui and Dong, Jingwei and Wu, Zirui and Zhao, Xueliang and Gong, Shansan and Jiang, Xin and Li, Zhenguo and others},
+  journal={arXiv preprint arXiv:2509.01142},
+  year={2025}
 }
 ```
