@@ -1,0 +1,13 @@
+transformers==4.46.2
+torch==2.5.1
+git+https://github.com/volcengine/verl.git@v0.3.0.post1
+antlr4-python3-runtime==4.11
+math-verify[antlr4_11_0]
+immutabledict
+langdetect
+rouge-score
+sandbox-fusion
+hydra-core==1.4.0.dev1
+vllm
+flash-attn==2.7.3
+evaluate

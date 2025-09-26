@@ -1,0 +1,57 @@
+data:
+  perbatch_cutoff: False
+  perbatch_cutoff_type: random
+  collate_fn_type: optimized
+  train_batch_size: 256
+  micro_batch_size_per_gpu: 4  # this is also val batch size
+  train_files: ~/data/gsm8k/train.parquet
+  val_files: ~/data/gsm8k/test.parquet
+  tokenized: False
+  prompt_key: question
+  response_key: answer
+  max_length: 1024
+  truncation: error
+  chat_template: null
+  resp_cutoff_ratio: 0.0
+  pad_token_id: null
+model:
+  partial_pretrain: ~/models/gemma-1.1-7b-it
+  fsdp_config:
+    wrap_policy:
+      min_num_params: 0
+    cpu_offload: False
+    offload_params: False
+  external_lib: null
+  enable_gradient_checkpointing: False
+  trust_remote_code: False
+  lora_rank: 0  # Set to positive value to enable LoRA (e.g., 32)
+  lora_alpha: 16  # LoRA scaling factor
+  target_modules: all-linear  # Target modules for LoRA adaptation
+  use_liger: False
+  attention_dropout: 0.0
+optim:
+  lr: 1e-5
+  betas: [0.9, 0.95]
+  weight_decay: 0.01
+  warmup_steps_ratio: 0.1
+  clip_grad: 1.0
+ulysses_sequence_parallel_size: 1
+use_remove_padding: False
+trainer:
+  default_local_dir: /tmp/sft_model
+  default_hdfs_dir: hdfs://tmp/experiments/gsm8k/gemma-1.1-7b-it/ # change the hdfs path here
+  resume_path: null
+  resume_training: False
+  project_name: gsm8k-sft
+  experiment_name: test
+  total_epochs: 3
+  total_training_steps: null
+  logger: ['console']
+  seed: 1
+  save_checkpoint_steps: 1000
+diffusion:
+  token_reweighting: false  # use focal loss for token-level reweighting
+  alpha: 0.25  # for focal loss
+  gamma: 2  # for focal loss
+  time_reweighting: original  # time-level reweighting strategy
+  cart_p: 0.1

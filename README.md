@@ -22,8 +22,12 @@ Dream-Coder 7B is a **diffusion LLM for code** trained exclusively on open-sourc
     <img src="assets/results.png" width="90%"/>
 <p>
 
-## Note on the Code Release 🥲
-We're still working through our internal code review. Thank you for your patience—please stay tuned!
+## News
+- **Sep 25, 2025:** Released data processing, training, and evaluation scripts for the instruct model. See [instruct](instruct).
+- **Sep 21, 2025:** Released data details and evaluation scripts for the base model. See [base](base).
+- **Sep 1, 2025:** Our [technical report](https://arxiv.org/abs/2509.01142) was out.
+- **July 23, 2025:** Try our online demo via [HF space](https://huggingface.co/spaces/ZiruiWu/Dream-Coder-Instruct-7B)!
+- **July 15, 2025:** Released Dream-Coder [checkpoints](https://huggingface.co/collections/Dream-org/dream-coder-7b-68761cfa0e218f0776a84ee7), along with our [blog post](https://hkunlp.github.io/blog/2025/dream-coder/) and [Notion page](https://zhxie.notion.site/Dream-Coder-7B-1d608d27359e805d9e56dc0fbee945b1).
 
 ## Features
 ### Flexible Code Generation
@@ -95,17 +99,18 @@ generations = [
 print(generations[0].split(tokenizer.eos_token)[0])
 ```
 
-## Releases
-- [x] [Our blog](https://hkunlp.github.io/blog/2025/dream-coder/) and [model weights](https://huggingface.co/collections/Dream-org/dream-coder-7b-68761cfa0e218f0776a84ee7)
-- [ ] Data processing scripts
-- [ ] Training recipes based on [verl](https://github.com/volcengine/verl)
+## Acknowledgement
+We gratefully acknowledge the following open-source projects, which have been instrumental to this work:
+- [verl](https://github.com/volcengine/verl): Reinforcement learning training framework
+- [SandboxFusion](https://bytedance.github.io/SandboxFusion/docs/docs/get-started): Secure code execution environment
+- [Fast-dLLM](https://github.com/NVlabs/Fast-dLLM): Inference acceleration for dLLMs
 
 ## Citation
 ```
-@misc{dreamcoder2025,
-    title = {Dream-Coder 7B},
-    url = {https://hkunlp.github.io/blog/2025/dream-coder},
-    author = {Xie, Zhihui and Ye, Jiacheng and Zheng, Lin and Gao, Jiahui and Dong, Jingwei and Wu, Zirui and Zhao, Xueliang and Gong, Shansan and Jiang, Xin and Li, Zhenguo and Kong, Lingpeng},
-    year = {2025}
+@article{xie2025dream,
+  title={Dream-coder 7b: An open diffusion language model for code},
+  author={Xie, Zhihui and Ye, Jiacheng and Zheng, Lin and Gao, Jiahui and Dong, Jingwei and Wu, Zirui and Zhao, Xueliang and Gong, Shansan and Jiang, Xin and Li, Zhenguo and others},
+  journal={arXiv preprint arXiv:2509.01142},
+  year={2025}
 }
 ```

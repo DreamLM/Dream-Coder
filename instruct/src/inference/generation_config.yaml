@@ -1,0 +1,78 @@
+default: &default
+  max_new_tokens: 512
+  steps: 512
+  temperature: 0.1
+  top_p: 0.95
+  alg_temp: 0.0
+  alg: "maskgit_plus"
+  use_cache: false
+
+cruxeval:
+  <<: *default
+  max_new_tokens: 768
+  steps: 768
+
+cruxeval_entropy:
+  <<: *default
+  max_new_tokens: 768
+  steps: 768
+  alg: "entropy"
+
+cruxeval_diffucoder:
+  <<: *default
+  max_new_tokens: 256
+  steps: 256
+  temperature: 0.4
+  alg: "entropy"
+
+cruxeval_512:
+  <<: *default
+  max_new_tokens: 512
+  steps: 512
+
+cruxeval_1024:
+  <<: *default
+  max_new_tokens: 1024
+  steps: 1024
+
+cruxeval_1024_entropy:
+  <<: *default
+  max_new_tokens: 1024
+  steps: 1024
+  alg: "entropy"
+
+cruxeval_cache:
+  <<: *default
+  max_new_tokens: 768
+  steps: 768
+  use_cache: true
+
+cruxeval_cache_1024:
+  <<: *default
+  max_new_tokens: 1024
+  steps: 1024
+  use_cache: true
+
+cruxeval_cache_temp0.5:
+  <<: *default
+  max_new_tokens: 768
+  steps: 768
+  use_cache: true
+  temperature: 0.5
+
+cruxeval_cache_temp0.8:
+  <<: *default
+  max_new_tokens: 768
+  steps: 768
+  use_cache: true
+  temperature: 0.8
+
+cruxeval_cache_temp1.0:
+  <<: *default
+  max_new_tokens: 768
+  steps: 768
+  use_cache: true
+  temperature: 1.0
+
+multipl_e:
+  <<: *default
