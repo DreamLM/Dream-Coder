@@ -1,0 +1,17 @@
+python main.py \
+    --model Qwen/Qwen2.5-Coder-7B-Instruct \
+    --use_auth_token \
+    --trust_remote_code \
+    --tasks input_prediction \
+    --batch_size 10 \
+    --n_samples 10 \
+    --max_length_generation 1024 \
+    --precision bf16 \
+    --limit 800 \
+    --temperature 0.2 \
+    --save_generations \
+    --save_generations_path model_generations_raw/example.json \
+    --start 0 \
+    --end 800 \
+    --shuffle \
+    --tensor_parallel_size 1
