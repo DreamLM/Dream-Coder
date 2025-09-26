@@ -99,12 +99,6 @@ generations = [
 print(generations[0].split(tokenizer.eos_token)[0])
 ```
 
-## Finetuning
-For detailed instructions on preparing data and finetuning the model, please refer to the [data preparation](instruct/examples/data_preparation) and [training](instruct/examples/training) directories.
-
-## Evaluation
-To evaluate Dream-Coder models, please refer to the [lm_eval](base/lm_eval) and [code_eval](instruct/code_eval) directory for detailed instructions and evaluation scripts.
-
 ## Acknowledgement
 We gratefully acknowledge the following open-source projects, which have been instrumental to this work:
 - [verl](https://github.com/volcengine/verl): Reinforcement learning training framework
