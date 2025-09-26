@@ -23,8 +23,8 @@ Dream-Coder 7B is a **diffusion LLM for code** trained exclusively on open-sourc
 <p>
 
 ## News
-- **Sep 25, 2025:** Released data processing, training, and evaluation scripts for the instruct model. See [instruct](instruct)
-- **Sep 21, 2025:** Released data details and evaluation scripts for the base model. See [base](base)
+- **Sep 25, 2025:** Released data processing, training, and evaluation scripts for the instruct model. See [instruct](instruct).
+- **Sep 21, 2025:** Released data details and evaluation scripts for the base model. See [base](base).
 - **Sep 1, 2025:** Our [technical report](https://arxiv.org/abs/2509.01142) was out.
 - **July 23, 2025:** Try our online demo via [HF space](https://huggingface.co/spaces/ZiruiWu/Dream-Coder-Instruct-7B)!
 - **July 15, 2025:** Released Dream-Coder [checkpoints](https://huggingface.co/collections/Dream-org/dream-coder-7b-68761cfa0e218f0776a84ee7), along with our [blog post](https://hkunlp.github.io/blog/2025/dream-coder/) and [Notion page](https://zhxie.notion.site/Dream-Coder-7B-1d608d27359e805d9e56dc0fbee945b1).
@@ -103,7 +103,7 @@ print(generations[0].split(tokenizer.eos_token)[0])
 For detailed instructions on preparing data and finetuning the model, please refer to the [data preparation](instruct/examples/data_preparation) and [training](instruct/examples/training) directories.
 
 ## Evaluation
-To evaluate Dream-Coder models, please refer to the [instruct/code_eval](instruct/code_eval) and [base/lm_eval](base/lm_eval) directory for detailed instructions and evaluation scripts.
+To evaluate Dream-Coder models, please refer to the [lm_eval](base/lm_eval) and [code_eval](instruct/code_eval) directory for detailed instructions and evaluation scripts.
 
 ## Acknowledgement
 We gratefully acknowledge the following open-source projects, which have been instrumental to this work:
