@@ -264,11 +264,6 @@ class DiffusionRunner:
         self.model_dict = model
         model_tokenizer_path = model.model_name
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self._model = AutoModel.from_pretrained(
-            model_tokenizer_path,
-            trust_remote_code=True,
-            torch_dtype=torch.bfloat16,
-        ).to(self.device)
         self._tokenizer = AutoTokenizer.from_pretrained(
             model_tokenizer_path,
             trust_remote_code=True,
